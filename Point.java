@@ -24,7 +24,7 @@ public class Point {
 		return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
 	}
 
-	public static Point centerOfMass(Point[] points){
+	public static Point centerOMass(Point[] points){
 		double addx = 0;
 		double addy = 0;
 
@@ -37,6 +37,13 @@ public class Point {
 		double centery = addy / points.length;
 
 		return new Point(centerx, centery);
+	}
+
+	public double angle{
+		private double x;
+		private double y;
+
+
 	}
 
 }

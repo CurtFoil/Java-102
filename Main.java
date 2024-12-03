@@ -19,7 +19,7 @@ public class Main {
         Point b = new Point (7.2, 5.5);
         System.out.println(Point.distance(a, b));
 
-        Point[] points = { a, b };
-        System.out.println(Point.centerOfMass(points));
+        Point[] points = {a, b};
+        System.out.println(Point.centerOMass(points));
     }
 }
