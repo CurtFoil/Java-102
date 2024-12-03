@@ -38,12 +38,16 @@ public class Point {
 
 		return new Point(centerx, centery);
 	}
-
-	public double angle{
-		private double x;
-		private double y;
-
-
+	// After spending some time on Trig, I think I might need more time to actually understand it. So functions involving trig was created with the help of a friend.
+	public double angle(){
+		return Math.toDegrees(Math.atan2(this.y, this.x));
 	}
 
+	public Point rotate90(){
+		return new Point(-this.y, this.x);
+	}
+
+	// public Point rotate(double theta){
+
+	// }
 }

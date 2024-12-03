@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     
     public static void main(String[] args) {
@@ -21,5 +23,32 @@ public class Main {
 
         Point[] points = {a, b};
         System.out.println(Point.centerOMass(points));
+
+        System.out.println(a.angle());
+        System.out.println(a.rotate90());
+
+        ArrayList<String> arr = new ArrayList<>();
+        arr.add("Hello");
+        arr.add("World");
+        System.out.println(arr);
+        arr.set(0, "Goodbye");
+        System.out.println(arr);
+
+        ArrayList<Boolean> conditions = new ArrayList<>();
+        conditions.add(true);
+        conditions.add(arr.get(0) == "Hello");
+        conditions.add(conditions.get(0) || conditions.get(1));
+        System.out.println(conditions);
+
+        // ArrayList<Integer> intArr = new ArrayList<>();
+        // for (int i = 0; i < 50; i++) {
+        //     intArr.add(0);
+        // }
+        // System.out.println(intArr.size());
+        // System.out.println(intArr.get(32));
+
+        Grid<Integer> grid = new Grid<>(5, 0);
+        grid.set(2, 2, 4);
+        System.out.println(grid);
     }
 }
