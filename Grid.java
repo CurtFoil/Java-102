@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Grid<T> {
 	private final ArrayList<ArrayList<T>> grid;
 	public final int sideLength;
-
+	private static int maxSideLength = 0;
 	public Grid(int sideLength, T defaultVal) {
 		this.sideLength = sideLength;
 		this.grid = new ArrayList<ArrayList<T>>(sideLength);
@@ -18,6 +18,10 @@ public class Grid<T> {
 				grid.get(i).add(defaultVal);
 			}
 		}
+
+		if (sideLength > maxSideLength) {
+            maxSideLength = sideLength;
+        }
 	}
 
 	public T get(int row, int col) {
@@ -39,4 +43,20 @@ public class Grid<T> {
 		}
 		return str;
 	}
+
+	// public ArrayList<T> diagonal(){
+
+	// }
+
+	public ArrayList<T> diagonal() {
+        ArrayList<T> elements = new ArrayList<>();
+        for (int i = 0; i < sideLength; i++) {
+            elements.add(grid.get(i).get(i));
+        }
+        return elements;
+    }
+
+	public static int maxSideLength() {
+        return maxSideLength;
+    }
 }
